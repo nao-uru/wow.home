@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    font-family: 'Fanklin Gothic Medium';
 }
 
 .container {
@@ -34,6 +35,7 @@ body {
 
 .backimg {
     background-image: url(header.photos/2020-05-21_08-35-32_469\ \(1\).jpeg);
+    background-position: center;
     height: 100%;
     width: 650px;
     background-size: contain;
@@ -48,6 +50,7 @@ body {
     padding: 25px;
     font-size: 2em;
     color: #fff;
+    margin-right: 20px;
 }   
 
 .intro {
@@ -85,7 +88,15 @@ body {
     width: 140px;
     height: 140px;
     margin: 15px 10px 0px 0px;
+
+    transition-duration: 0.3s;
 }
+
+.person img:hover {
+    transform: rotate(360deg);
+}
+
+
 
 .p-list li{
     font-size: 1.3vw;
@@ -121,8 +132,13 @@ body {
     height: 100%;
 }
 
-.fa-instagram,.fa-twitter {
+.fa-twitter {
     margin: 5px 3px 3px 3px;
+}
+
+.fa-instagram {
+    margin-right: 3px;
+    margin-top: 5px;
 }
 
 
@@ -216,6 +232,23 @@ body {
 
 /*historyのcss*/
 
+.h-backimg {
+    background-image: url(header.photos/2020-05-21_08-35-12_967\ \(1\).jpeg);
+    height: 100%;
+    width: 650px;
+    background-size: contain;
+    opacity: 0.6;
+    margin: 0 auto;   
+}
+
+.h-backimg h2 {
+    margin-top: 0px;
+    text-align: center;
+    padding-top: 160px;
+    color: #fff;
+    font-size: 35px;
+}
+
 .h-cards {
     margin: 20px;
 }
@@ -232,7 +265,7 @@ body {
 
 .h-card:hover {
     box-shadow: 0 10px 20px #ccc;
-    transition: 1s;
+    transition: 0.3s;
 }
 
 .h-card img {
@@ -286,24 +319,35 @@ body {
     letter-spacing: 1px;
     border-radius: 5px;
     margin-top: 1em;
+    outline: none;
 }
 
 .h-btn:hover {
     border: 1px solid #fff;
+    
 }
 
 
 /*snsのcss*/
 
 .s-backimg {
-    background-image: url(header.photos/2020-05-21_08-35-12_967\ \(1\).jpeg);
+    background-image: url(header.photos/2020-05-20_11-05-22_643.jpeg);
     height: 100%;
     width: 650px;
+    background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.6;
-    margin: 0 auto;
-    
+    margin: 0 auto;   
+    color: #fff;
 }
+
+.s-backimg h2 {
+    margin-top: 0px;
+    text-align: center;
+    padding-top: 160px;
+    color: #fff;
+    font-size: 35px;
+}    
 
 .s-photos {
     margin: 0 auto;
@@ -325,10 +369,16 @@ body {
     margin-right: 5px;
 }
 
+#s-icon {
+    margin-right: 3px;
+}
+
 .s-photos {
     margin: 0 auto;
     padding: 10px 5px;
 }
+
+
 
 .s-gallery {
     list-style: none;
@@ -423,7 +473,7 @@ textarea {
 }
 
 .button {
-    width: 20%;
+    width: 150px;
     height: 30px;
     background-color: rgb(136, 127, 127);
     color: #fff;
@@ -447,23 +497,24 @@ input[type="checkbox"] {
 
 /*タブレット*/
 @media screen and (max-width:1000px) {
+
     .main {
         margin-left: 0;
-        margin-right: 0;
+        margin-right: 0px;
     }
     .aside {
         margin-left: 0;
     }
 
     .person {
-        width: 100%;
+        width: 95%;
     }
 
     .sns-name {
         display: none;
     }
 
-    .fa-instagram {
+     .fa-instagram { 
         margin: 0 auto;
     }
     
@@ -481,9 +532,24 @@ input[type="checkbox"] {
 
     .backimg {
         width: 100%;
-        background-size: contain;
+        background-size: cover;
         background-repeat: none;
     }
+
+    .h-backimg {
+        width: 100%;
+        background-size: cover;
+        background-repeat: none;
+        background-position: center;
+    }
+
+    .s-backimg {
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: none; 
+    }
+
 
     .container {
         width: 100%;
@@ -517,7 +583,10 @@ input[type="checkbox"] {
     }
 
     .person {
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        overflow: hidden;
     }
 
     .p-link {
@@ -529,7 +598,11 @@ input[type="checkbox"] {
     }
 
     .sns {
-        width: 25%;
+        width: 7em;
+    }
+
+    .fa-instagram {
+        margin: 5px 3px 5px 3px;
     }
 
     .sns-name {
@@ -588,32 +661,8 @@ input[type="checkbox"] {
        width: 100%;
    }
 
-    /*.aside {
-        position: absolute;
-        height: 80%;
-        left: -290px;
-        transition: all 0.2s;
-        background-color: rgb(153, 137, 137);
-    }
-
-    .open,
-    .close {
-        display: block;
-    }
-
-    .open {
-        position: absolute;
-    }
-
-    input[type="checkbox"]:checked ~ .aside {
-        left: 0;
-    }
-
-    input[type="checkbox"]:checked ~ .back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }:*/
+   table {
+       margin: 0 auto;
+   }
 
 }
